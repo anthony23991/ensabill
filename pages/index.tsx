@@ -187,7 +187,7 @@ const Home: NextPage = () => {
                   wordSpacing: 7,
                 }}
               >
-                We know managing your money isn't easy but with the Reports page
+                We know managing your money isn&apos;t easy but with the Reports page
                 on Ensabill you can now understand your overall monthly
                 financial performances.
               </p>
