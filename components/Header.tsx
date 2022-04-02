@@ -1,5 +1,4 @@
 import { Grid } from "@mui/material";
-import { fontSize } from "@mui/material/node_modules/@mui/system";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
