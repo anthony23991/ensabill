@@ -1,7 +1,27 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { Button, Grid } from "@mui/material";
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import { Header } from "../components/Header";
+import styles from "../styles/Home.module.css";
+
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+    slidesToSlide: 3, // optional, default to 1.
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+    slidesToSlide: 2, // optional, default to 1.
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
+  },
+};
 
 const Home: NextPage = () => {
   return (
@@ -12,61 +32,466 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcoww to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+      <main className={styles.mainContainer}>
+        <Grid
+          container
+          paddingLeft={"5%"}
+          display={"flex"}
+          color={"white"}
+          fontFamily={"Roboto"}
+        >
+          <Grid item xs={3}>
+            <p className={styles.title1}>Your smart money assistant!</p>
+            <p
+              className={styles.description}
+              style={{ paddingRight: 15, textAlign: "justify", wordSpacing: 7 }}
+            >
+              Ensabill is the all-in-one personal economic assistant that helps
+              in setting and achieving all financial goals.
             </p>
-          </a>
-        </div>
+            <p
+              className={styles.description}
+              style={{ paddingRight: 15, textAlign: "justify", wordSpacing: 6 }}
+            >
+              Ensabill allows you to set budgets and avoid overspending by
+              incorporating all your bank accounts and payments under one roof.
+              I also adds special features such as budget assistant and credit
+              scores to make your life easier.
+            </p>
+            <Button className={styles.homeButton}>
+              Watch our features in action
+            </Button>
+            <Grid
+              flexDirection={"row"}
+              justifyContent={"space-between"}
+              paddingTop={5}
+              container
+            >
+              <Image
+                alt="google-play-store"
+                src={"/google-store.svg"}
+                layout={"intrinsic"}
+                width={140}
+                height={45}
+              />
+              <Image
+                alt="app-store"
+                src={"/app-store.svg"}
+                layout={"intrinsic"}
+                width={151}
+                height={24}
+              />
+            </Grid>
+          </Grid>
+          <Grid item xs={9} paddingTop={5} position={"relative"}>
+            <Grid position={"absolute"} right={0} paddingRight={15}>
+              <Image
+                alt="Ensabill-logo"
+                src={"/ensabill-background.svg"}
+                layout={"intrinsic"}
+                width={700}
+                height={700}
+                objectPosition={"absolute"}
+              />
+            </Grid>
+            <Grid position={"absolute"} bottom={0} left={0} paddingRight={15}>
+              <Image
+                alt="home-screen-1"
+                src={"/home-screen-1.svg"}
+                layout={"intrinsic"}
+                width={500}
+                height={650}
+                objectPosition={"absolute"}
+                style={{ position: "absolute", right: 0 }}
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          paddingLeft={"5%"}
+          display={"flex"}
+          color={"white"}
+          fontFamily={"Roboto"}
+          marginTop={10}
+          marginBottom={10}
+        >
+          <Grid
+            item
+            xs={6}
+            textAlign={"end"}
+            marginRight={10}
+            paddingRight={10}
+          >
+            <Image
+              alt="home-screen-2"
+              src={"/home-screen-2.svg"}
+              layout={"intrinsic"}
+              width={600}
+              height={600}
+              objectPosition={"absolute"}
+              style={{ position: "absolute", right: 0 }}
+            />
+          </Grid>
+          <Grid
+            item
+            container
+            xs={4}
+            color={"white"}
+            fontFamily={"Roboto"}
+            paddingTop={10}
+          >
+            <Grid>
+              <h3 className={styles.featureTitle}>AMAZING FEATURES</h3>
+              <h2 className={styles.title2}>Budget to never overspend</h2>
+              <p
+                className={styles.description}
+                style={{
+                  paddingRight: 90,
+                  textAlign: "justify",
+                  wordSpacing: 7,
+                }}
+              >
+                Be ready for our automatic budgeting assistant that enables you
+                to set your monthly or annual spending limits and then your
+                digital assistant will suggest a spending plan for you..
+              </p>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          paddingLeft={"5%"}
+          display={"flex"}
+          color={"white"}
+          fontFamily={"Roboto"}
+          marginTop={0}
+          marginBottom={10}
+        >
+          <Grid
+            item
+            container
+            xs={4}
+            color={"white"}
+            fontFamily={"Roboto"}
+            paddingTop={10}
+          >
+            <Grid>
+              <h3 className={styles.featureTitle}>AMAZING FEATURES</h3>
+              <h2 className={styles.title2}>Advanced Reports</h2>
+              <p
+                className={styles.description}
+                style={{
+                  paddingRight: 80,
+                  textAlign: "justify",
+                  wordSpacing: 7,
+                }}
+              >
+                We know managing your money isn't easy but with the Reports page
+                on Ensabill you can now understand your overall monthly
+                financial performances.
+              </p>
+            </Grid>
+          </Grid>
+          <Grid item xs={7} textAlign={"end"} paddingRight={10}>
+            <Image
+              alt="home-screen-3"
+              src={"/home-screen-3.svg"}
+              layout={"intrinsic"}
+              width={600}
+              height={450}
+              objectPosition={"absolute"}
+              style={{ position: "absolute", right: 0 }}
+            />
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          paddingLeft={"5%"}
+          display={"flex"}
+          color={"white"}
+          fontFamily={"Roboto"}
+          marginTop={10}
+          marginBottom={10}
+        >
+          <Grid
+            item
+            xs={6}
+            textAlign={"end"}
+            marginRight={20}
+            paddingRight={10}
+          >
+            <Image
+              alt="home-screen-4"
+              src={"/home-screen-4.svg"}
+              layout={"intrinsic"}
+              width={600}
+              height={600}
+              objectPosition={"absolute"}
+              style={{ position: "absolute", right: 0 }}
+            />
+          </Grid>
+          <Grid
+            item
+            container
+            xs={4}
+            color={"white"}
+            fontFamily={"Roboto"}
+            paddingTop={15}
+          >
+            <Grid>
+              <h3 className={styles.featureTitle}>AMAZING FEATURES</h3>
+              <h2 className={styles.title2}>Easily detect overspending</h2>
+              <p
+                className={styles.description}
+                style={{
+                  paddingRight: 90,
+                  textAlign: "justify",
+                  wordSpacing: 7,
+                }}
+              >
+                Monitoring finances between separate accounts is now easy!
+              </p>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          paddingLeft={"5%"}
+          paddingRight={"5%"}
+          display={"flex"}
+          color={"white"}
+          fontFamily={"Roboto"}
+          marginTop={10}
+          marginBottom={10}
+        >
+          <Grid container className={styles.homeCard} flexDirection={"row"}>
+            <Grid item xs={6}>
+              <h3 className={styles.featureTitle} style={{ fontSize: "37px" }}>
+                MERGE EVERYTHING WITH EASE
+              </h3>
+              <h2 className={styles.title2} style={{ wordSpacing: 11 }}>
+                Connect to all your Bank Accounts
+              </h2>
+              <p
+                className={styles.description}
+                style={{
+                  fontSize: "32px",
+                  paddingRight: 90,
+                  textAlign: "justify",
+                  wordSpacing: 5,
+                  lineHeight: "38px",
+                }}
+              >
+                Monitoring finances between separate accounts is now easy!
+                <br></br>
+                You also have the option to enter your data manually.
+              </p>
+            </Grid>
+            <Grid
+              item
+              xs={5}
+              justifyContent={"center"}
+              textAlign={"center"}
+              paddingTop={9}
+              marginBottom={"15vh"}
+            >
+              <Image
+                alt="home-screen-5"
+                src={"/home-screen-5.svg"}
+                layout={"intrinsic"}
+                width={300}
+                height={300}
+                objectPosition={"absolute"}
+              />
+            </Grid>
+            <Grid container flexDirection={"row"}>
+              <Grid
+                item
+                xs={3}
+                style={{
+                  borderRight: "1px solid #00FFE7",
+                  textAlign: "center",
+                }}
+                padding={3}
+                justifyContent={"space-between"}
+              >
+                <Image
+                  alt="home-screen-5"
+                  src={"/icons/time-icon.svg"}
+                  layout={"intrinsic"}
+                  width={52}
+                  height={72}
+                />
+                <p
+                  className={styles.description}
+                  style={{
+                    fontSize: "28px",
+                    textAlign: "center",
+                    lineHeight: "33px",
+                    marginTop: "11vh",
+                    alignSelf: "flex-end",
+                  }}
+                >
+                  Save your time
+                </p>
+              </Grid>
+              <Grid
+                item
+                xs={3}
+                style={{
+                  borderRight: "1px solid #00FFE7",
+                  textAlign: "center",
+                }}
+                padding={3}
+                paddingBottom={1}
+              >
+                <Image
+                  alt="money-icon"
+                  src={"/icons/money-icon.svg"}
+                  layout={"intrinsic"}
+                  width={150}
+                  height={62}
+                />
+                <p
+                  className={styles.description}
+                  style={{
+                    fontSize: "28px",
+                    textAlign: "center",
+                    lineHeight: "33px",
+                    marginTop: "5vh",
+                    alignSelf: "flex-end",
+                  }}
+                >
+                  Transactions Automatically Categorized
+                </p>
+              </Grid>
+              <Grid
+                item
+                xs={3}
+                style={{
+                  borderRight: "1px solid #00FFE7",
+                  textAlign: "center",
+                }}
+                padding={3}
+              >
+                <Image
+                  alt="chart-icon"
+                  src={"/icons/chart-icon.svg"}
+                  layout={"intrinsic"}
+                  width={52}
+                  height={72}
+                  objectPosition={"absolute"}
+                />
+                <p
+                  className={styles.description}
+                  style={{
+                    fontSize: "28px",
+                    textAlign: "center",
+                    lineHeight: "33px",
+                    marginTop: "5vh",
+                    alignSelf: "flex-end",
+                    paddingLeft: "4vh",
+                    paddingRight: "4vh",
+                  }}
+                >
+                  Know which account is underperforming
+                </p>
+              </Grid>
+              <Grid item xs={3} style={{ textAlign: "center" }} padding={3}>
+                <Image
+                  alt="card-icon"
+                  src={"/icons/card-icon.svg"}
+                  layout={"intrinsic"}
+                  width={110}
+                  height={55}
+                  objectPosition={"absolute"}
+                />
+                <p
+                  className={styles.description}
+                  style={{
+                    fontSize: "28px",
+                    textAlign: "center",
+                    lineHeight: "33px",
+                    marginTop: "8vh",
+                    alignSelf: "flex-end",
+                  }}
+                >
+                  Reports will now become one
+                </p>
+              </Grid>
+            </Grid>
+            <Grid
+              width={"100%"}
+              textAlign="center"
+              justifyContent="center"
+              marginTop={15}
+            >
+              <h4
+                className={styles.noMargin}
+                style={{
+                  color: "#62E8E8",
+                  fontWeight: 600,
+                  fontSize: "34px",
+                }}
+              >
+                We support 2000+ Banks
+              </h4>
+              <p
+                className={styles.noMargin}
+                style={{
+                  fontWeight: 400,
+                  fontSize: "32px",
+                  marginTop: "2vh",
+                  textDecoration: "underline",
+                  marginBottom: "7vh",
+                }}
+              >
+                + Let us know if we do not support your Bank yet
+              </p>
+              <Image
+                alt="chart-icon"
+                src={"/banks-homepage.png"}
+                layout={"responsive"}
+                width={809}
+                height={407}
+                objectPosition={"absolute"}
+              />
+            </Grid>
+          </Grid>
+          <Grid
+          container
+          textAlign="center"
+          justifyContent={"center"}
+          flexDirection="column"
+          paddingTop={5}
+          >
+            <h2
+              style={{
+                fontWeight: "500",
+                fontSize: "55px",
+                textAlign: "center",
+                paddingBottom: "2vh",
+              }}
+            >
+              What people are saying!
+            </h2>
+
+            <Image
+                alt="chart-icon"
+                src={"/banks-homepage.png"}
+                layout={"responsive"}
+                width={"100"}
+                height={407}
+                objectPosition={"absolute"}
+              />
+          </Grid>
+        </Grid>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <footer className={styles.footer}></footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

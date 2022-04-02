@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "Roboto";
 }
 
 .footer {
@@ -26,34 +27,6 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
 }
 
 .code {
@@ -113,4 +86,84 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.noMargin {
+  margin: 0;
+}
+
+/* ////////////////////////////////// */
+
+.headerLink:hover {
+  font-weight: 700;
+  border-bottom: 5px solid #00ffe8;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.title1 {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 66px;
+  color: white;
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 3vh;
+}
+.title2 {
+  font-family: "Roboto";
+  font-weight: 600;
+  font-size: 61px;
+  color: white;
+  margin: 0;
+  margin-top: 2vh;
+  margin-bottom: 4vh;
+}
+.featureTitle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 45px;
+  text-align: justify;
+  color: #75cccc;
+  margin: 0;
+  margin-top: 2vh;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 0;
+  /* flex-wrap: wrap; */
+}
+
+.homeButton {
+  text-transform: none;
+  margin-top: 4vh;
+  background: #75cccc;
+  padding: 10px 0;
+  color: black;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  width: 100%;
+}
+
+.homeCard {
+  background: linear-gradient(
+    -1.24deg,
+    rgba(117, 204, 204, 0.2) 0.77%,
+    rgba(117, 204, 204, 0) 101.98%
+  );
+  filter: drop-shadow(0px 10px 10px #000000);
+  border-radius: 97px;
+  flex-direction: row;
+  padding: 10vh;
+  width: 100%;
 }
